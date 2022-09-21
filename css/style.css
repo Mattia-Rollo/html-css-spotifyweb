@@ -20,6 +20,17 @@
 --dark-grey: rgba(40, 40, 40, 1);
 }
 
+/* classi colori  */
+
+.white {
+    color: var(--text-white);
+}
+.grey {
+color: var(--text-grey);
+}
+
+
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -29,13 +40,27 @@ body {
     height: 100vh;
     background-color: black;
 }
+.container {
+    position: relative;
+    /* margin: 1rem -0.75rem; */
+}
 
-
-
+h2 {
+    padding-top: 1.5rem;
+}
+img {
+    width: 100%;
+    border-radius: 0.2rem;
+}
 nav {
     width: 230px;
     height: 100%;
     background-color: lightseagreen;
+}
+span {
+    display: block;
+    padding-top: 1rem;
+    font-weight: 700;
 }
 
 
@@ -57,7 +82,7 @@ main {
 .main-content {
     width: calc(100% - 230px);
     height: 100%;
-    background-color: yellow;
+    background-color: var(--dark-gray);
     /* overflow: auto; */
 }
 
@@ -93,7 +118,7 @@ aside {
 .inner-content {
     overflow-y: auto;
     height: 100%;
-    padding: 95px 20px;
+    padding: 95px 20px;  /* spazio laterale dato a tutto il contenuto main*/
 }
 .nav-main ul {
     display: flex;
@@ -111,6 +136,26 @@ div.nav-main {
     height: 75px;
 }
 
+/* sezione cards  */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    width: calc((100% / 6) - 3rem);
+    margin: 0 0.75rem;
+    padding: 0.75rem;
+    border-radius: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.cards span {
+    text-align: center;
+}
+.subtitle {
+    font-size: 0.8rem;
+    
+}
 
 
 /* footer  */
