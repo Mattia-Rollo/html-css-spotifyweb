@@ -111,7 +111,7 @@ aside {
 .bottone {
     display: block;
     text-decoration: none;
-    color: var(--text-white);
+    color: rgba(255, 255, 255, 0.677);
     border: 1px solid var(--text-white);
     border-radius: 1.5rem;
     padding: 0.75rem 1.5rem;
@@ -120,7 +120,7 @@ aside {
 }
 .bottone:hover {
     border-width: 0.1rem;
-    font-size: 1.005rem;
+    color: rgba(255, 255, 255, 1);
     /* box-shadow: 0px 0px 10px -5px var(--text-white); */
     /* text-shadow: 0px 0px 10px 2px var(--text-white); */
 }
@@ -185,6 +185,7 @@ aside {
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
 }
+
 .card::before {
     transition: all 1s;
     color: rgba(255, 255, 255, 0.5);
@@ -192,7 +193,7 @@ aside {
 .card:hover::before {
     display:flex;
     font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+    /* font-weight: 900; */
     content: "\f144";
     color: rgba(255, 255, 255, 1);
     position: absolute;
@@ -203,6 +204,7 @@ aside {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
+    border-radius: 10px;
   }
 
 /* .card::after {
@@ -245,4 +247,30 @@ aside {
     height: 95px;
     background-color: var(--dark-gray);
     z-index: 5000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+.item img {
+    width: 100px;
+    padding:  0 1rem;
+}
+.item span {
+    font-size: 0.75rem;
+    padding: 0;
+}
+.item span:first-child{
+    font-size: 1rem;
+}
+.item .song {
+    padding: 1.5rem 0;
+    height: 100%;
+}
+#controls .item div:nth-child(3) {
+    padding: 0 1rem;
 }
