@@ -21,7 +21,6 @@
 --text-white: rgba(255, 255, 255, 1);
 --text-grey: rgba(113, 113, 113, 1);
 --lime-green: rgba(173, 255, 47, 1);
---dark-gray: rgba(40, 40, 40, 1);
 --dark-grey: rgba(40, 40, 40, 1);
 }
 
@@ -245,14 +244,14 @@ aside {
 .playbar {
     width: 100%;
     height: 95px;
-    background-color: var(--dark-gray);
+    background-color: var(--dark-grey);
     z-index: 5000;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .item {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
 }
@@ -264,7 +263,7 @@ aside {
     font-size: 0.75rem;
     padding: 0;
 }
-.item span:first-child{
+.item.left span:first-child{
     font-size: 1rem;
 }
 .item .song {
@@ -273,4 +272,40 @@ aside {
 }
 #controls .item div:nth-child(3) {
     padding: 0 1rem;
+}
+#controls .left {
+    height: 100%;
+    width: 300px;
+}
+#controls .center {
+    width: 400px;
+    /* height: 100%; */
+    justify-content: space-around;
+    padding: 1rem 1rem;
+    /* flex-direction: column; */
+    align-items: flex-end;
+}
+#controls .right {
+    height:100%;
+    width: 300px;
+    justify-content: flex-end
+}
+.time-bar-center {
+    height: 100%;
+}
+#controls .time-bar-center span:first-child {
+    text-align: center;
+    font-size: 1.8rem;
+}
+#controls .time-bar-center span:nth-child(2) {
+    height: 5px;
+    background-color: var(--text-grey);
+    border-radius: 1.5rem;
+    width: 200px;
+}
+#controls .right span:last-child {
+    height: 5px;
+    background-color: var(--text-grey);
+    border-radius: 1.5rem;
+    width: 150px;
 }
