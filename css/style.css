@@ -61,6 +61,7 @@ nav {
     width: 230px;
     height: 100%;
     background-color: var(--nero-100);
+    position: relative;
 }
 span {
     display: block;
@@ -147,13 +148,16 @@ a.logo  {
 .playlist li:first-child a:hover:before{
     background-color: var(--text-white);
 } 
-
-
-
 .playlist .title {
     padding: 1rem 0;;
 }
 
+.install-profile {
+    position: absolute;
+    bottom: 0;
+    background-color: aquamarine;
+
+}
 
 
 
