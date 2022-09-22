@@ -89,6 +89,75 @@ li {
 .subtitle {
     font-size: 0.8rem; 
 }
+a{
+    text-decoration: none;
+    color: var(--text-grey);
+}
+a.logo  {
+   display: block;
+   padding: 1rem 1rem;
+}
+.logo img {
+    width: 80%;
+}
+.menu-nav li {
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
+}
+.menu-nav li img {
+    width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu-nav li a {
+    font-weight: 700;
+} 
+.menu-nav li img {
+    filter: contrast(0);
+}
+.menu-nav a:hover img {
+    filter: contrast(1);
+}
+.menu-nav li a:hover, .menu-nav a:hover img{
+    color: var(--text-white);
+}
+.playlist {
+    padding: 1rem 1rem;
+}
+.playlist li {
+    font-weight: 700;
+    color: var(--text-grey);
+    line-height: 2.5rem;
+}
+.playlist li:first-child {
+    vertical-align: middle;
+}
+.playlist li:first-child a::before {
+    content: '+';
+    color: var(--nero-100);
+    font-size: 2rem;
+    background-color: var(--text-grey);
+    padding:  0rem 0.5rem ;
+    vertical-align: middle;
+    font-weight: 600;
+}
+.playlist li a:hover {
+    color: var(--text-white);
+}
+.playlist li:first-child a:hover:before{
+    background-color: var(--text-white);
+} 
+
+
+
+.playlist .title {
+    padding: 1rem 0;;
+}
+
+
+
+
+
 
 
 
@@ -326,7 +395,7 @@ a.active {
     padding: 0 1rem;
 }
 #controls .right i{
- padding: 0.2rem;
+ padding: 0rem 0.5rem;
  font-size: 1rem;
 }
 .controls-center {
