@@ -521,7 +521,7 @@ a.active {
  
 
 input[type="number"] {
-    width: 40px;
+    width: 5vw;
     padding: 4px 5px;
     border: 1px solid #bbb;
     border-radius: 3px;
@@ -599,10 +599,15 @@ input[type="range"] {
     background: transparent;
   } */
 
-  /* media query 1200 768 992 755  */
+  /* media query 1200 768 992 575  */
 
   @media screen and (max-width:1200px) {
-    
+    .cards {
+        flex-wrap: wrap;
+    }
+    .card {
+        width: calc((100% / 4) - 1.5rem);
+    }
   }
   @media screen and (max-width: 992px) {
     main .nav-main ul{
@@ -617,10 +622,36 @@ input[type="range"] {
     main .nav-main a {
         padding: 1rem 0;
     }
-    .cards {
-        flex-wrap: wrap;
-    }
     .card {
         width: calc((100% / 3) - 1.5rem);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .card {
+        width: calc((100% / 2) - 1.5rem);
+    }
+    .options {
+        display: none;
+    }
+    #controls .right {
+        width: auto;
+    }
+    #controls .left{
+        width: auto;
+    }
+    #controls .left i {
+        display: none;
+    }
+    .song {
+        width: 50px;
+    }
+  }
+  @media screen and (max-width: 692px) {
+    main .nav-main li {
+        width: 150px;
+    }
+    .inner-content {
+        padding-top: 115px;
+        padding-bottom: 0;
     }
   }
