@@ -96,6 +96,9 @@ li {
 .subtitle {
     font-size: 0.8rem; 
 }
+.txt-left {
+    text-align: left;
+}
 a{
     text-decoration: none;
     color: var(--text-grey);
@@ -118,6 +121,7 @@ nav a {
 nav a:hover {
     border-left: 1px solid var(--lime-green);
     cursor: pointer;
+    color: var(--text-white);
 }
 .menu-nav li img {
     width: 15%;
@@ -137,18 +141,17 @@ nav .menu-nav li img {
     color: var(--text-white);
 }
 .playlist {
-    
-    
-    padding-bottom: 1rem;
     overflow-y: hidden;
 }
 
 .list li {
     font-weight: 700;
     color: var(--text-grey);
-    line-height: 2.5rem;
+    line-height: 1.7rem;
 }
-
+.add-list {
+    font-weight: 700;
+}
 .add-list::before {
     content: '+';
     color: var(--nero-100);
@@ -162,22 +165,12 @@ nav .menu-nav li img {
     overflow-y: auto;
 }
 .playlist .title {
-    margin: 0 1rem;
-}
-.playlist li a {
-    padding: 0 1.5rem;
-    width: 100%;
-}
-.playlist li a:hover {
-    color: var(--text-white);
-
+    padding: 1rem 1rem ;
+    text-align: left;
 }
 .playlist li:first-child:hover a::before{
     background-color: var(--text-white);
 } 
-.playlist .title {
-    padding: 1rem 0;;
-}
 .dinamic {
    height: 100%; 
 }
@@ -299,7 +292,6 @@ aside {
     border: 1px solid var(--lime-green);
     background-color: var(--lime-green);
     box-shadow: 0px 0px 8px 2px var(--lime-green);
-
     width: 2rem;
 }
 .nav-main a:hover:before {
