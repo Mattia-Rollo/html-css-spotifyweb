@@ -199,11 +199,12 @@
                     </div>
                 </div>
             </div>
-            <div class="item right justify-s-a">
-                <div>
+            <div class="item right">
+                <div class="options">
                     <i class="fa-solid fa-list"></i>
                     <i class="fa-solid fa-display"></i>
                     <i class="fa-solid fa-volume-high"></i>
+                    <output id="rangevalue">50</output>
                 </div>
                 <div class="volume-bar">
                     
@@ -211,8 +212,8 @@
                     <output id="rangevalue">70</output> -->
 
                     <div>
-                        <output id="rangevalue">50</output>
-                        <input type="range" value="50" min="0" max="100" oninput="rangevalue.value=value"/>
+                        
+                        <input type="range" value="50" min="0" max="100" orient="vertical" oninput="rangevalue.value=value"/>
                       
                       </div>
                 </div>
