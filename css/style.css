@@ -118,10 +118,21 @@ nav a {
     display: block;
     padding: 0.3rem 1rem;
 }
-nav a:hover {
-    border-left: 1px solid var(--lime-green);
+/* nav a:hover:not(.logo, .add-list)::before { */
+nav a:hover::before {
+
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    border: 1px solid var(--lime-green);
+    background: var(--lime-green);
+    box-shadow: -5px 0px 8px 1px var(--lime-green);
+    vertical-align: middle;
+    /* border-left: 1px solid var(--lime-green);
+    box-shadow: -5px 0px 0px 1px var(--lime-green);
     cursor: pointer;
-    color: var(--text-white);
+    color: var(--text-white); */
 }
 .menu-nav li img {
     width: 15%;
@@ -168,7 +179,10 @@ nav .menu-nav li img {
     padding: 1rem 1rem ;
     text-align: left;
 }
-.playlist li:first-child:hover a::before{
+.add-list:hover {
+    color: var(--text-white);
+}
+.add-list:hover::before{
     background-color: var(--text-white);
 } 
 .dinamic {
@@ -272,7 +286,7 @@ aside {
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 75px; */
+    height: 75px;
 }
 .nav-main a {
     position:relative;
@@ -359,7 +373,9 @@ a.active {
     z-index: 1000;
     border-radius: 10px;
   }
-
+.card:hover {
+    cursor: pointer;
+}
 
 
 
@@ -455,11 +471,14 @@ a.active {
 .controls-center span {
     margin: 0 1rem;
 } 
-#controls .controls-center .time-bar {
+#controls .controls-center .time.bar {
     height: 5px;
     background-color: var(--text-grey);
     border-radius: 1.5rem;
-    width: 400px;
+    width: 20vw;
+}
+.time:not(.bar), .time-end {
+    padding: 0.6rem;
 }
 /* #controls .right span:last-child {
     height: 5px;
@@ -476,8 +495,11 @@ input[type="range"] {
     height: 5px;
     width: 100%;
     border-radius: 1rem;
-    background: rgba(156, 156, 156, 0.908);
+    background-color: rgba(156, 156, 156, 0.908);
     cursor: pointer;
+    background-image: linear-gradient(rgb(55, 55, 55), rgb(69, 69, 69));
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
     /* outline: none; */
     /* box-shadow: 0 0 2px 0 white; */
   }
@@ -485,9 +507,15 @@ input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    background: white;
+    width: 10px;
+    height: 10px;
+    background: rgb(94, 94, 94);
     cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-runnable-track  {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 /* media query 1200 768 992 755  */
