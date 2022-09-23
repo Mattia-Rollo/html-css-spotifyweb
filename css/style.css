@@ -107,6 +107,10 @@ a.logo  {
    display: block;
    padding: 1rem 1rem;
 }
+.logo-sm {
+    display: none;
+
+}
 .logo img {
     width: 80%;
 }
@@ -144,7 +148,7 @@ nav li:hover::before {
     color: var(--text-white); */
 }
 .menu-nav li img {
-    width: 15%;
+    width: 30px;
     display: inline-block;
     vertical-align: middle;
 }
@@ -653,5 +657,48 @@ input[type="range"] {
     .inner-content {
         padding-top: 115px;
         padding-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 592px) {
+   nav {
+    width: 100px
+   }
+   .main-content {
+    width: calc(100% - 100px);
+   }
+   aside {
+    width: calc(100% - 100px);
+   }
+    
+    .logo img:first-child {
+        display: none;
+    }
+    .logo img.logo-sm {
+        display: block;
+        width: 40px;
+    }
+    .list {
+        display: none;
+    }
+    .playlist {
+        display: none;
+    }
+    .add-list {
+        display: none;
+    }
+    nav hr {
+        display: none;
+    }
+    .menu-nav span {
+        display: none;
+    }
+    #controls .left {
+        display: none;
+    }
+    #controls .right {
+        display: none;
+    }
+    .playbar {
+        justify-content: center;
     }
   }
