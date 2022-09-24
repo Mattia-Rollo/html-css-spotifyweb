@@ -164,9 +164,9 @@ nav .menu-nav li img {
 .menu-nav li a:hover {
     color: var(--text-white);
 }
-.playlist {
+/* .playlist {
     overflow-y: hidden;
-}
+} */
 
 .list li {
     font-weight: 700;
@@ -667,13 +667,19 @@ input[type="range"] {
         padding-top: 115px;
         padding-bottom: 0;
     }
+    nav {
+        width: 200px;
+    }
+    .main-content {
+        width: calc(100% - 200px);
+       }
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 560px) {
    nav {
     width: 60px;
    }
    .card {
-    width: calc(100% - 1.5rem);
+    width: calc((100% / 2) - 1.5rem);
    }
    .card:nth-child(1) ~ div {
     display: block;
@@ -704,6 +710,9 @@ input[type="range"] {
     nav hr {
         display: none;
     }
+    .nav-main ul {
+        justify-content: center;
+    }
     .menu-nav span {
         display: none;
     }
@@ -716,8 +725,17 @@ input[type="range"] {
     #controls .right {
         display: none;
     }
+    #controls .center {
+        display: block;
+    }
+    #controls .center  {
+        display: block;
+    }
     .playbar {
-        justify-content: center;
+        display: block;
+    }
+    #controls .controls-center .time.bar {
+        width: 72vw;
     }
   }
 
