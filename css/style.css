@@ -673,6 +673,9 @@ input[type="range"] {
     .main-content {
         width: calc(100% - 200px);
        }
+       /* aside {
+        width: calc(100% -200px);
+       } */
   }
   @media screen and (max-width: 560px) {
    nav {
@@ -681,11 +684,11 @@ input[type="range"] {
    .card {
     width: calc((100% / 2) - 1.5rem);
    }
-   .card:nth-child(1) ~ div {
+   .card:nth-child(2) ~ div {
     display: block;
   }
    .main-content {
-    width: calc(100% - 30px);
+    width: 100%;
    }
    aside {
     width: calc(100% - 60px);
@@ -738,7 +741,14 @@ input[type="range"] {
         width: 72vw;
     }
   }
-
+@media screen and (max-width: 408px) {
+    .nav-main ul li:nth-child(2) ~ li{
+        display: none;
+    }
+    main .nav-main ul {
+        flex-wrap: nowrap;
+    }
+}
 
 
 
